@@ -15,11 +15,6 @@ variables:
 
 steps:
 - script: |
-    gem install asciidoctor
-    type asciidoctor
-  workingDirectory: '$(modulePath)'
-  displayName: 'AsciiDoctor'
-- script: |
     mkdir -p '$(GOBIN)'
     mkdir -p '$(GOPATH)/pkg'
     mkdir -p '$(modulePath)'
@@ -28,6 +23,12 @@ steps:
     echo '##vso[task.prependpath]$(GOBIN)'
     echo '##vso[task.prependpath]$(GOROOT)/bin'
   displayName: 'Set up the Go workspace'
+
+- script: |
+    gem install asciidoctor
+    type asciidoctor
+  workingDirectory: '$(modulePath)'
+  displayName: 'AsciiDoctor'
 
 - script: |
     go version
