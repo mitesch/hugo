@@ -17,6 +17,7 @@ steps:
 - script: |
     gem install asciidoctor
     type asciidoctor
+ displayName: 'AsciiDoctor'
 - script: |
     mkdir -p '$(GOBIN)'
     mkdir -p '$(GOPATH)/pkg'
