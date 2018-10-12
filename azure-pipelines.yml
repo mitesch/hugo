@@ -25,8 +25,7 @@ steps:
   displayName: 'Set up the Go workspace'
 
 - script: |
-    sudo apt-get install -y gem
-    gem install asciidoctor
+    sudo apt-get install asciidoctor
     type asciidoctor
   workingDirectory: '$(modulePath)'
   displayName: 'AsciiDoctor'
