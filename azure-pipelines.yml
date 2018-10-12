@@ -25,7 +25,7 @@ steps:
   displayName: 'Set up the Go workspace'
 
 - script: |
-    sudo apt-get install asciidoctor
+    sudo apt-get install -y asciidoctor
     type asciidoctor
   workingDirectory: '$(modulePath)'
   displayName: 'AsciiDoctor'
